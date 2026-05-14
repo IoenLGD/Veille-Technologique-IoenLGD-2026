@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact — Ioen Le Gourlay-Denis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="vt-styles.css"/>
+  <style>
+    .contact-wrap{max-width:820px;margin:0 auto;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:14px;align-items:start;}
+    .contact-card{padding:26px;}
+    .contact-card h2{font-size:15px;font-weight:600;color:#0a0a0f;letter-spacing:-0.02em;margin-bottom:18px;}
+    .cr{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:13px;background:rgba(255,255,255,0.5);border:0.5px solid rgba(255,255,255,0.9);transition:all 0.2s;margin-bottom:8px;}
+    .cr:last-child{margin-bottom:0;}
+    .cr:hover{background:rgba(255,255,255,0.75);transform:translateX(3px);}
+    .cr-icon{font-size:18px;flex-shrink:0;}
+    .cr-label{font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-3);}
+    .cr-val{font-size:13px;font-weight:500;color:#0a0a0f;}
+    .cform{display:flex;flex-direction:column;gap:13px;}
+    .cform-row{display:flex;flex-direction:column;gap:5px;}
+    .cform-row label{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3);}
+    .cform-row input,.cform-row textarea{background:rgba(255,255,255,0.55);border:0.5px solid rgba(0,0,0,0.1);border-radius:11px;font-family:'Geist',sans-serif;font-size:14px;color:#0a0a0f;padding:10px 13px;outline:none;resize:none;transition:all 0.2s;}
+    .cform-row input::placeholder,.cform-row textarea::placeholder{color:var(--text-3);}
+    .cform-row input:focus,.cform-row textarea:focus{border-color:rgba(0,122,255,0.45);background:rgba(255,255,255,0.8);box-shadow:0 0 0 4px rgba(0,122,255,0.1);}
+    .form-status{font-size:13px;color:var(--blue);text-align:center;min-height:1.2em;}
+    @media(max-width:680px){.contact-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="bg-canvas" aria-hidden="true"><div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div></div>
+<nav class="site-nav" id="nav">
+  <div class="nav-pill">
+    <a href="index.html" class="nav-logo">ILG<em>D</em></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-a" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="veilletechnologique.html" class="nav-a" data-fr="Veille" data-en="Tech Watch">Veille</a>
+      <a href="cv.html" class="nav-a" data-fr="CV" data-en="CV">CV</a>
+      <a href="contact.html" class="nav-a active" data-fr="Contact" data-en="Contact">Contact</a>
+      <a href="portfolio.html" class="nav-a" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+    </div>
+    <button class="lang-btn" id="langBtn">EN</button>
+    <button class="burger" id="burger"><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-drawer glass" id="drawer">
+  <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="veilletechnologique.html" data-fr="Veille" data-en="Tech Watch">Veille</a>
+  <a href="hardware.html" data-fr="Hardware" data-en="Hardware">Hardware</a>
+  <a href="systemedexploitation.html" data-fr="Syst. OS" data-en="OS">Syst. OS</a>
+  <a href="cybersecurite.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a>
+  <a href="reseaux.html" data-fr="Réseaux" data-en="Networks">Réseaux</a>
+  <a href="cv.html" data-fr="CV" data-en="CV">CV</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="portfolio.html" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+</div>
+
+<main class="page">
+  <div class="container">
+    <div class="container" style="max-width:680px; margin-top: 90px;"></div>
+    <div class="contact-wrap">
+      <div class="sec-header ios-anim" data-d="0">
+        <span class="eyebrow" data-fr="Travaillons ensemble" data-en="Let's work together">Travaillons ensemble</span>
+        <h1>Contact</h1>
+      </div>
+      <div class="contact-grid">
+        <div class="glass contact-card ios-anim" data-d="40">
+          <h2 data-fr="Mes coordonnées" data-en="My details">Mes coordonnées</h2>
+          <a href="mailto:legourlayioen.pro@outlook.com" class="cr">
+            <span class="cr-icon">✉️</span>
+            <div><div class="cr-label">Email</div><div class="cr-val">legourlayioen.pro@outlook.com</div></div>
+          </a>
+          <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" class="cr">
+            <span class="cr-icon">💼</span>
+            <div><div class="cr-label">LinkedIn</div><div class="cr-val" data-fr="Mon profil" data-en="My profile">Mon profil</div></div>
+          </a>
+          <a href="https://github.com/IoenLGD" target="_blank" rel="noopener" class="cr">
+            <span class="cr-icon">🐙</span>
+            <div><div class="cr-label">GitHub</div><div class="cr-val">IoenLGD</div></div>
+          </a>
+        </div>
+        <div class="glass contact-card ios-anim" data-d="80">
+          <h2 data-fr="M'écrire un message" data-en="Send a message">M'écrire un message</h2>
+          <form id="contactForm" class="cform" novalidate>
+            <div class="cform-row">
+              <label data-fr="Nom" data-en="Name">Nom</label>
+              <input type="text" id="fname" placeholder="Votre nom" data-ph-fr="Votre nom" data-ph-en="Your name" required/>
+            </div>
+            <div class="cform-row">
+              <label data-fr="Email" data-en="Email">Email</label>
+              <input type="email" id="femail" placeholder="votre@email.com" required/>
+            </div>
+            <div class="cform-row">
+              <label data-fr="Message" data-en="Message">Message</label>
+              <textarea id="fmsg" rows="5" placeholder="Votre message…" data-ph-fr="Votre message…" data-ph-en="Your message…" required></textarea>
+            </div>
+            <button type="submit" class="btn-p" style="width:100%;justify-content:center;" data-fr="Envoyer" data-en="Send">Envoyer</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="container" style="max-width:680px; margin-top: 135px;"></div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ioen Le Gourlay-Denis</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+  </div>
+</footer>
+<script src="vt-script.js"></script>
+<script>
+const form=document.getElementById('contactForm'),status=document.getElementById('formStatus');
+if(form&&status){form.addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('fname').value.trim(),em=document.getElementById('femail').value.trim(),m=document.getElementById('fmsg').value.trim();if(!n||!em||!m)return;window.location.href='mailto:legourlayioen.pro@outlook.com?subject='+encodeURIComponent('Contact Veille — '+n)+'&body='+encodeURIComponent('De : '+n+' <'+em+'>\n\n'+m);status.textContent='✓ Votre client mail va s\'ouvrir…';form.reset();setTimeout(()=>{status.textContent='';},5000);});}
+</script>
+</body>
+</html>

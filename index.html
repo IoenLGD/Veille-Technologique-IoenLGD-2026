@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Accueil — Veille Technologique — Ioen Le Gourlay-Denis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="vt-styles.css"/>
+  <style>
+    .hero-home{padding:44px 36px 36px;text-align:center;max-width:680px;margin:0 auto 32px;}
+    .hero-home .photo-wrap{position:relative;width:96px;height:96px;margin:0 auto 20px;}
+    .hero-home .photo-wrap img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.85);box-shadow:0 0 0 1px rgba(0,0,0,0.06),0 6px 20px rgba(0,0,0,0.1);}
+    .hero-home .photo-ring{position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.1),rgba(255,255,255,0.85));z-index:-1;}
+    .hero-home h1{font-size:clamp(28px,5vw,46px);font-weight:700;letter-spacing:-0.04em;color:#0a0a0f;line-height:1.05;margin-bottom:10px;}
+    .hero-home h1 span{color:var(--blue);}
+    .hero-home .hero-sub{font-size:14px;color:var(--text-2);line-height:1.7;max-width:520px;margin:0 auto 28px;}
+    .stats-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;}
+    .stat-pill{background:rgba(255,255,255,0.55);border:0.5px solid rgba(255,255,255,0.9);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--text-2);}
+    .stat-pill strong{color:#0a0a0f;font-weight:600;}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px;}
+    .about-card{padding:20px 18px;}
+    .about-card-icon{font-size:22px;margin-bottom:10px;display:block;}
+    .about-card h3{font-size:14px;font-weight:600;color:#0a0a0f;letter-spacing:-0.02em;margin-bottom:6px;}
+    .about-card p{font-size:12px;color:var(--text-2);line-height:1.6;}
+    .quick-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+    .ql-card{padding:16px 18px;display:flex;align-items:center;gap:12px;transition:transform 0.22s cubic-bezier(0.34,1.2,0.64,1);}
+    .ql-card:hover{transform:translateY(-3px);}
+    .ql-icon{font-size:20px;flex-shrink:0;}
+    .ql-text h3{font-size:13px;font-weight:600;color:#0a0a0f;margin-bottom:2px;}
+    .ql-text p{font-size:11px;color:var(--text-2);}
+    .ql-arrow{margin-left:auto;font-size:13px;color:var(--text-3);transition:all 0.2s;}
+    .ql-card:hover .ql-arrow{color:var(--blue);transform:translate(2px,-2px);}
+    @media(max-width:560px){.about-grid{grid-template-columns:1fr;}.stats-row{flex-direction:column;align-items:center;}}
+  </style>
+</head>
+<body>
+<div class="bg-canvas" aria-hidden="true"><div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-pill">
+    <a href="index.html" class="nav-logo">ILG<em>D</em></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-a active">Accueil</a>
+      <a href="veilletechnologique.html" class="nav-a" data-fr="Veille" data-en="Tech Watch">Veille</a>
+      <a href="cv.html" class="nav-a">CV</a>
+      <a href="contact.html" class="nav-a">Contact</a>
+      <a href="portfolio.html" class="nav-a">Portfolio</a>
+    </div>
+    <button class="lang-btn" id="langBtn">EN</button>
+    <button class="burger" id="burger"><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-drawer glass" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="veilletechnologique.html">Veille Technologique</a>
+  <a href="hardware.html">Hardware</a>
+  <a href="systemedexploitation.html">Syst. d'exploitation</a>
+  <a href="cybersecurite.html">Cybersécurité</a>
+  <a href="reseaux.html">Réseaux</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+  <a href="portfolio.html">Portfolio</a>
+</div>
+
+<main class="page">
+  <div class="container">
+    <div class="container" style="max-width:680px; margin-top: 90px;"></div>
+
+    <!-- HERO -->
+    <div class="glass hero-home ios-anim" data-d="0">
+      <div class="photo-wrap">
+        <div class="photo-ring"></div>
+        <img src="photo-profil.jpg" alt="Ioen Le Gourlay-Denis"/>
+      </div>
+      <span class="eyebrow" data-fr="BTS SIO · SISR · 2ᵉ année" data-en="IT Systems & Networks · Year 2">BTS SIO · SISR · 2ᵉ année</span>
+      <h1>Ioen <span>Le Gourlay-Denis</span></h1>
+      <p class="hero-sub" data-fr="Âgé de 21 ans, je réalise une veille technologique régulière afin de rester à jour sur les évolutions du secteur informatique. Je m'informe sur le hardware, les systèmes d'exploitation, la cybersécurité et les réseaux pour anticiper les évolutions et adapter mes compétences aux exigences des environnements professionnels." data-en="21 years old, I carry out regular technology monitoring to stay up to date with developments in the IT sector, covering hardware, operating systems, cybersecurity and networks.">Âgé de 21 ans, je réalise une veille technologique régulière afin de rester à jour sur les évolutions du secteur informatique. Je m'informe sur le hardware, les systèmes d'exploitation, la cybersécurité et les réseaux pour anticiper les évolutions et adapter mes compétences aux exigences des environnements professionnels.</p>
+      <div class="stats-row">
+        <span class="stat-pill"><strong>81</strong> articles Hardware</span>
+        <span class="stat-pill"><strong>80</strong> articles Cybersécurité</span>
+        <span class="stat-pill"><strong>81</strong> articles Réseaux</span>
+        <span class="stat-pill"><strong>27</strong> articles OS</span>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="veilletechnologique.html" class="btn-p" data-fr="Découvrir la veille" data-en="Explore tech watch">Découvrir la veille</a>
+        <a href="contact.html" class="btn-ghost"   data-fr="Me contacter" data-en="Get in touch">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- À PROPOS -->
+    <div class="sec-header ios-anim" data-d="60">
+      <span class="eyebrow" data-fr="Qui suis-je" data-en="Who I am">Qui suis-je</span>
+      <h1 data-fr="Ma démarche" data-en="My approach">Ma démarche</h1>
+    </div>
+    <div class="about-grid">
+      <div class="glass about-card ios-anim" data-d="80">
+        <span class="about-card-icon">🖥️</span>
+        <h3 data-fr="Hardware & Composants" data-en="Hardware & Components">Hardware & Composants</h3>
+        <p data-fr="Suivi des GPU, CPU, RAM, SSD et innovations matérielles. Analyse des tendances de prix et performances." data-en="Tracking GPU, CPU, RAM, SSD and hardware innovations. Price trend and performance analysis.">Suivi des GPU, CPU, RAM, SSD et innovations matérielles. Analyse des tendances de prix et performances.</p>
+      </div>
+      <div class="glass about-card ios-anim" data-d="120">
+        <span class="about-card-icon">⚙️</span>
+        <h3 data-fr="Systèmes d'exploitation" data-en="Operating Systems">Systèmes d'exploitation</h3>
+        <p data-fr="Évolutions Windows, Linux, macOS. Mises à jour, nouvelles fonctionnalités et bonnes pratiques d'administration." data-en="Windows, Linux, macOS updates. New features and system administration best practices.">Évolutions Windows, Linux, macOS. Mises à jour, nouvelles fonctionnalités et bonnes pratiques d'administration.</p>
+      </div>
+      <div class="glass about-card ios-anim" data-d="160">
+        <span class="about-card-icon">🔒</span>
+        <h3 data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</h3>
+        <p data-fr="Vulnérabilités CVE, correctifs, nouvelles menaces et attaques. Sensibilisation aux bonnes pratiques de sécurité." data-en="CVE vulnerabilities, patches, new threats and attacks. Security best practices awareness.">Vulnérabilités CVE, correctifs, nouvelles menaces et attaques. Sensibilisation aux bonnes pratiques de sécurité.</p>
+      </div>
+      <div class="glass about-card ios-anim" data-d="200">
+        <span class="about-card-icon">🌐</span>
+        <h3 data-fr="Réseaux" data-en="Networks">Réseaux</h3>
+        <p data-fr="Protocoles réseau, équipements, Wi-Fi 7, 5G/6G et sécurisation des infrastructures IT." data-en="Network protocols, equipment, Wi-Fi 7, 5G/6G and IT infrastructure security.">Protocoles réseau, équipements, Wi-Fi 7, 5G/6G et sécurisation des infrastructures IT.</p>
+      </div>
+    </div>
+
+    <!-- LIENS RAPIDES -->
+    <div class="sec-header ios-anim" data-d="220">
+      <span class="eyebrow" data-fr="Navigation" data-en="Navigation">Navigation</span>
+      <h1 data-fr="Accès rapide" data-en="Quick access">Accès rapide</h1>
+    </div>
+    <div class="quick-links">
+      <a href="veilletechnologique.html" class="glass ql-card ios-anim" data-d="240">
+        <span class="ql-icon">📋</span>
+        <div class="ql-text"><h3 data-fr="Toutes les sections" data-en="All sections">Toutes les sections</h3><p data-fr="Vue d'ensemble de la veille" data-en="Tech watch overview">Vue d'ensemble de la veille</p></div>
+        <span class="ql-arrow">↗</span>
+      </a>
+      <a href="cv.html" class="glass ql-card ios-anim" data-d="280">
+        <span class="ql-icon">📄</span>
+        <div class="ql-text"><h3>CV</h3><p data-fr="Parcours & compétences" data-en="Experience & skills">Parcours & compétences</p></div>
+        <span class="ql-arrow">↗</span>
+      </a>
+      <a href="contact.html" class="glass ql-card ios-anim" data-d="320">
+        <span class="ql-icon">✉️</span>
+        <div class="ql-text"><h3>Contact</h3><p data-fr="Me contacter" data-en="Get in touch">Me contacter</p></div>
+        <span class="ql-arrow">↗</span>
+      </a>
+      <a href="portfolio.html" class="glass ql-card ios-anim" data-d="360">
+        <span class="ql-icon">🗂️</span>
+        <div class="ql-text"><h3>Portfolio</h3><p data-fr="Projets techniques" data-en="Technical projects">Projets techniques</p></div>
+        <span class="ql-arrow">↗</span>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ioen Le Gourlay-Denis</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+  </div>
+</footer>
+<script src="vt-script.js"></script>
+</body>
+</html>
