@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Portfolio — Ioen Le Gourlay-Denis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="vt-styles.css"/>
+  <style>
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;}
+    .proj-card{display:flex;align-items:flex-start;gap:14px;padding:20px;transition:transform 0.25s cubic-bezier(0.34,1.2,0.64,1),box-shadow 0.25s;}
+    .proj-card:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(255,255,255,1) inset,0 -0.5px 0 rgba(0,0,0,0.05) inset,0 24px 60px rgba(0,0,0,0.12),0 0 0 1px rgba(0,122,255,0.1);}
+    .proj-icon{font-size:22px;width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.7);border:0.5px solid rgba(0,0,0,0.07);border-radius:13px;}
+    .proj-body{flex:1;}
+    .proj-body h3{font-size:14px;font-weight:600;color:#0a0a0f;letter-spacing:-0.02em;margin-bottom:5px;}
+    .proj-body p{font-size:12px;color:var(--text-2);line-height:1.55;margin-bottom:9px;}
+    .proj-tags{display:flex;flex-wrap:wrap;gap:4px;}
+    .proj-tag{font-size:10px;font-weight:500;color:var(--blue);background:var(--blue-light);padding:2px 8px;border-radius:100px;border:0.5px solid var(--blue-border);}
+    .proj-arrow{font-size:15px;color:var(--text-3);flex-shrink:0;padding-top:2px;transition:all 0.2s;}
+    .proj-card:hover .proj-arrow{color:var(--blue);transform:translate(2px,-2px);}
+    @media(max-width:600px){.proj-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="bg-canvas" aria-hidden="true"><div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-pill">
+    <a href="index.html" class="nav-logo">ILG<em>D</em></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-a">Accueil</a>
+      <a href="veilletechnologique.html" class="nav-a" data-fr="Veille" data-en="Tech Watch">Veille</a>
+      <a href="cv.html" class="nav-a">CV</a>
+      <a href="contact.html" class="nav-a">Contact</a>
+      <a href="portfolio.html" class="nav-a active">Portfolio</a>
+    </div>
+    <select class="lang-select" id="langSelect" aria-label="Changer la langue">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+    <label class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
+      <input type="checkbox" id="themeCheckbox">
+      <span class="theme-track">
+        <span class="theme-thumb">
+          <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="4.2" fill="#fff"/>
+            <g stroke="#fff" stroke-width="1.7" stroke-linecap="round">
+              <line x1="12" y1="1.8" x2="12" y2="4.2"/>
+              <line x1="12" y1="19.8" x2="12" y2="22.2"/>
+              <line x1="1.8" y1="12" x2="4.2" y2="12"/>
+              <line x1="19.8" y1="12" x2="22.2" y2="12"/>
+              <line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/>
+              <line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/>
+              <line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/>
+              <line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/>
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.2 14.9A8.4 8.4 0 1 1 9.6 4.3a6.7 6.7 0 0 0 10.6 10.6z" fill="#000"/>
+          </svg>
+        </span>
+      </span>
+    </label>
+    <button class="burger" id="burger"><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-drawer glass" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="veilletechnologique.html">Veille</a>
+  <a href="hardware.html">Hardware</a>
+  <a href="systemedexploitation.html">Syst. d'exploitation</a>
+  <a href="cybersecurite.html">Cybersécurité</a>
+  <a href="reseaux.html">Réseaux</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+  <a href="portfolio.html">Portfolio</a>
+</div>
+
+<main class="page">
+  <div class="container">
+  <div class="container" style="max-width:680px; margin-top: 90px;"></div>
+
+    <!-- HEADER -->
+    <div class="sec-header ios-anim" data-d="0">
+      <span class="eyebrow" data-fr="Réalisations BTS SIO SISR" data-en="BTS SIO SISR Projects">Réalisations BTS SIO SISR</span>
+      <h1 data-fr="Projets Techniques" data-en="Technical Projects">Projets Techniques</h1>
+    </div>
+
+    <!-- INTRO CARD -->
+    <div class="glass ios-anim" data-d="40" style="padding:22px 26px;margin-bottom:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;">
+        <p style="font-size:14px;color:var(--text-2);line-height:1.7;" data-fr="Retrouvez ci-dessous l'ensemble de mes projets techniques réalisés en BTS SIO SISR. Chaque projet est documenté avec un mode opératoire complet." data-en="Below you'll find all my technical projects completed during BTS SIO SISR. Each project is documented with a full step-by-step guide.">Retrouvez ci-dessous l'ensemble de mes projets techniques réalisés en BTS SIO SISR. Chaque projet est documenté avec un mode opératoire complet.</p>
+      </div>
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/" target="_blank" rel="noopener" class="btn-p" data-fr="Portfolio complet ↗" data-en="Full portfolio ↗">Portfolio complet ↗</a>
+    </div>
+
+    <!-- PROJETS GRID -->
+    <div class="proj-grid">
+
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/projet-prtg.html" target="_blank" rel="noopener" class="glass proj-card ios-anim" data-d="60">
+        <div class="proj-icon">📡</div>
+        <div class="proj-body">
+          <h3>PRTG Network Monitor</h3>
+          <p data-fr="Supervision réseau complète en stage réel : découverte automatique, capteurs Ping/trafic, alertes mail." data-en="Full network monitoring in real internship: auto-discovery, Ping/traffic sensors, email alerts.">Supervision réseau complète en stage réel : découverte automatique, capteurs Ping/trafic, alertes mail.</p>
+          <div class="proj-tags"><span class="proj-tag">Windows</span><span class="proj-tag">SNMP</span><span class="proj-tag">Monitoring</span></div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/projet-active-directory.html" target="_blank" rel="noopener" class="glass proj-card ios-anim" data-d="100">
+        <div class="proj-icon">🏢</div>
+        <div class="proj-body">
+          <h3>Active Directory</h3>
+          <p data-fr="Domaine AD, OU, groupes, GPO et profils itinérants sous VirtualBox." data-en="AD domain, OU, groups, GPOs and roaming profiles under VirtualBox.">Domaine AD, OU, groupes, GPO et profils itinérants sous VirtualBox.</p>
+          <div class="proj-tags"><span class="proj-tag">Windows Server</span><span class="proj-tag">AD DS</span><span class="proj-tag">GPO</span></div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/projet-zabbix.html" target="_blank" rel="noopener" class="glass proj-card ios-anim" data-d="140">
+        <div class="proj-icon">📈</div>
+        <div class="proj-body">
+          <h3>Zabbix 7.4</h3>
+          <p data-fr="Installation Debian 13 + scénario de surveillance web avec déclencheurs." data-en="Debian 13 install + web monitoring scenario with triggers.">Installation Debian 13 + scénario de surveillance web avec déclencheurs.</p>
+          <div class="proj-tags"><span class="proj-tag">Debian</span><span class="proj-tag">MariaDB</span><span class="proj-tag">Monitoring</span></div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/projet-glpi.html" target="_blank" rel="noopener" class="glass proj-card ios-anim" data-d="180">
+        <div class="proj-icon">🎫</div>
+        <div class="proj-body">
+          <h3>GLPI 10</h3>
+          <p data-fr="Gestion de parc et ticketing sur Debian 12 avec stack LAMP sécurisée." data-en="Asset management & ticketing on Debian 12 with secure LAMP stack.">Gestion de parc et ticketing sur Debian 12 avec stack LAMP sécurisée.</p>
+          <div class="proj-tags"><span class="proj-tag">PHP 8.2</span><span class="proj-tag">Apache</span><span class="proj-tag">MariaDB</span></div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a href="https://ioenlgd.github.io/PortFolio-IoenLGD-2026/projet-serveur-lamp.html" target="_blank" rel="noopener" class="glass proj-card ios-anim" data-d="220">
+        <div class="proj-icon">⚙️</div>
+        <div class="proj-body">
+          <h3>Serveur LAMP</h3>
+          <p data-fr="Serveur web complet sous Debian avec SSH et configuration réseau." data-en="Full web server on Debian with SSH and network configuration.">Serveur web complet sous Debian avec SSH et configuration réseau.</p>
+          <div class="proj-tags"><span class="proj-tag">Linux</span><span class="proj-tag">Apache</span><span class="proj-tag">SSH</span></div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+    </div>
+  </div>
+</main>
+<div class="container" style="max-width:680px; margin-top: 110px;"></div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ioen Le Gourlay-Denis</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+  </div>
+</footer>
+<script src="vt-script.js?v=5"></script>
+</body>
+</html>

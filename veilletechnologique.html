@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Veille Technologique — Ioen Le Gourlay-Denis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="vt-styles.css"/>
+</head>
+<body>
+<div class="bg-canvas" aria-hidden="true"><div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-pill">
+    <a href="index.html" class="nav-logo">ILG<em>D</em></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-a" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="veilletechnologique.html" class="nav-a active" data-fr="Veille" data-en="Tech Watch">Veille</a>
+      <a href="hardware.html" class="nav-a" data-fr="Hardware" data-en="Hardware">Hardware</a>
+      <a href="systemedexploitation.html" class="nav-a" data-fr="Syst. OS" data-en="OS">Syst. OS</a>
+      <a href="cybersecurite.html" class="nav-a" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a>
+      <a href="reseaux.html" class="nav-a" data-fr="Réseaux" data-en="Networks">Réseaux</a>
+      <a href="cv.html" class="nav-a" data-fr="CV" data-en="CV">CV</a>
+      <a href="contact.html" class="nav-a" data-fr="Contact" data-en="Contact">Contact</a>
+      <a href="portfolio.html" class="nav-a" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+    </div>
+    <select class="lang-select" id="langSelect" aria-label="Changer la langue">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+    <label class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
+      <input type="checkbox" id="themeCheckbox">
+      <span class="theme-track">
+        <span class="theme-thumb">
+          <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="4.2" fill="#fff"/>
+            <g stroke="#fff" stroke-width="1.7" stroke-linecap="round">
+              <line x1="12" y1="1.8" x2="12" y2="4.2"/>
+              <line x1="12" y1="19.8" x2="12" y2="22.2"/>
+              <line x1="1.8" y1="12" x2="4.2" y2="12"/>
+              <line x1="19.8" y1="12" x2="22.2" y2="12"/>
+              <line x1="4.4" y1="4.4" x2="6.1" y2="6.1"/>
+              <line x1="17.9" y1="17.9" x2="19.6" y2="19.6"/>
+              <line x1="4.4" y1="19.6" x2="6.1" y2="17.9"/>
+              <line x1="17.9" y1="6.1" x2="19.6" y2="4.4"/>
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.2 14.9A8.4 8.4 0 1 1 9.6 4.3a6.7 6.7 0 0 0 10.6 10.6z" fill="#000"/>
+          </svg>
+        </span>
+      </span>
+    </label>
+    <button class="burger" id="burger"><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-drawer glass" id="drawer">
+  <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="hardware.html" data-fr="Hardware" data-en="Hardware">Hardware</a>
+  <a href="systemedexploitation.html" data-fr="Système d'exploitation" data-en="OS">Système d'exploitation</a>
+  <a href="cybersecurite.html" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</a>
+  <a href="reseaux.html" data-fr="Réseaux" data-en="Networks">Réseaux</a>
+  <a href="cv.html" data-fr="CV" data-en="CV">CV</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="portfolio.html" data-fr="Portfolio" data-en="Portfolio">Portfolio</a>
+</div>
+
+<main class="page">
+  <div class="container">
+    <div class="container" style="max-width:680px; margin-top: 90px;"></div>
+    <div class="glass hero-vt ios-anim" data-d="0">
+      <span class="eyebrow" data-fr="BTS SIO · SISR · 2ᵉ année" data-en="IT Systems & Networks · Year 2">BTS SIO · SISR · 2ᵉ année</span>
+      <h1>Veille <span>Technologique</span></h1>
+      <p data-fr="Ioen Le Gourlay-Denis — Suivi hebdomadaire des évolutions dans le domaine des systèmes, réseaux, cybersécurité et hardware." data-en="Ioen Le Gourlay-Denis — Weekly monitoring of developments in systems, networks, cybersecurity and hardware.">Ioen Le Gourlay-Denis — Suivi hebdomadaire des évolutions dans le domaine des systèmes, réseaux, cybersécurité et hardware.</p>
+      <div class="hero-btns">
+        <a href="hardware.html" class="btn-p">🖥️ Hardware</a>
+        <a href="systemedexploitation.html" class="btn-p">⚙️ <span data-fr="Systèmes d'exploitation" data-en="Operating Systems">Systèmes d'exploitation</span></a>
+        <a href="cybersecurite.html" class="btn-p">🔒 <span data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span></a>
+        <a href="reseaux.html" class="btn-p">🌐 <span data-fr="Réseaux" data-en="Networks">Réseaux</span></a>
+      </div>
+    </div>
+
+    <div class="sec-cards">
+      <a href="hardware.html" class="glass sec-card ios-anim" data-d="0">
+        <span class="sec-card-icon">🖥️</span>
+        <div class="sec-card-title">Hardware <span class="sec-card-arrow">↗</span></div>
+        <div class="sec-card-desc" data-fr="Composants, GPU, CPU, RAM, stockage, smartphones et performances matérielles." data-en="Components, GPU, CPU, RAM, storage, smartphones and hardware performance.">Composants, GPU, CPU, RAM, stockage, smartphones et performances matérielles.</div>
+        <div class="tags"><span class="tag">CPU</span><span class="tag">GPU</span><span class="tag">RAM</span><span class="tag">SSD</span></div>
+      </a>
+      <a href="systemedexploitation.html" class="glass sec-card ios-anim" data-d="70">
+        <span class="sec-card-icon">⚙️</span>
+        <div class="sec-card-title"><span data-fr="Syst. d'exploitation" data-en="Operating Systems">Syst. d'exploitation</span> <span class="sec-card-arrow">↗</span></div>
+        <div class="sec-card-desc" data-fr="Évolutions Windows, Linux, macOS, mises à jour et bonnes pratiques d'administration." data-en="Windows, Linux, macOS updates and system administration best practices.">Évolutions Windows, Linux, macOS, mises à jour et bonnes pratiques d'administration.</div>
+        <div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">macOS</span></div>
+      </a>
+      <a href="cybersecurite.html" class="glass sec-card ios-anim" data-d="140">
+        <span class="sec-card-icon">🔒</span>
+        <div class="sec-card-title"><span data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span> <span class="sec-card-arrow">↗</span></div>
+        <div class="sec-card-desc" data-fr="Vulnérabilités, correctifs, nouvelles menaces et bonnes pratiques de sécurité." data-en="Vulnerabilities, patches, new threats and security best practices.">Vulnérabilités, correctifs, nouvelles menaces et bonnes pratiques de sécurité.</div>
+        <div class="tags"><span class="tag">CVE</span><span class="tag">Malware</span><span class="tag">RGPD</span></div>
+      </a>
+      <a href="reseaux.html" class="glass sec-card ios-anim" data-d="210">
+        <span class="sec-card-icon">🌐</span>
+        <div class="sec-card-title"><span data-fr="Réseaux" data-en="Networks">Réseaux</span> <span class="sec-card-arrow">↗</span></div>
+        <div class="sec-card-desc" data-fr="Protocoles, équipements réseau, Wi-Fi, 5G et sécurisation des infrastructures." data-en="Protocols, network equipment, Wi-Fi, 5G and infrastructure security.">Protocoles, équipements réseau, Wi-Fi, 5G et sécurisation des infrastructures.</div>
+        <div class="tags"><span class="tag">TCP/IP</span><span class="tag">Wi-Fi 7</span><span class="tag">5G</span></div>
+      </a>
+    </div>
+  </div>
+</main>
+<div class="container" style="max-width:680px; margin-top: 105px;"></div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ioen Le Gourlay-Denis</span>
+    <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+  </div>
+</footer>
+<script src="vt-script.js?v=5"></script>
+</body>
+</html>
